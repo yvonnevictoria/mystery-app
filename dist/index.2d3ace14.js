@@ -27165,22 +27165,27 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRelay = require("react-relay");
+var _appMealDetailsQueryGraphql = require("./__generated__/AppMealDetailsQuery.graphql");
+var _appMealDetailsQueryGraphqlDefault = parcelHelpers.interopDefault(_appMealDetailsQueryGraphql);
+var _relayEnvironment = require("./RelayEnvironment");
+var _relayEnvironmentDefault = parcelHelpers.interopDefault(_relayEnvironment);
 var _s = $RefreshSig$();
 var _AppMealDetailsQuery;
+const queryRef = (0, _reactRelay.loadQuery)((0, _relayEnvironmentDefault.default), (0, _appMealDetailsQueryGraphqlDefault.default), {});
 function App() {
     _s();
-    const result = (0, _reactRelay.useLazyLoadQuery)(_AppMealDetailsQuery !== void 0 ? _AppMealDetailsQuery : (_AppMealDetailsQuery = require("9a3cafc6ac4d2d25"), _AppMealDetailsQuery.hash && _AppMealDetailsQuery.hash !== "b4267d36866f59c4578ff11b70bbd070" && console.error("The definition of 'AppMealDetailsQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data."), _AppMealDetailsQuery), {});
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: result.firstMeal.name
-    }, void 0, false, {
-        fileName: "src/App.tsx",
-        lineNumber: 6,
-        columnNumber: 10
-    }, this);
+    const result = (0, _reactRelay.usePreloadedQuery)(_AppMealDetailsQuery !== void 0 ? _AppMealDetailsQuery : (_AppMealDetailsQuery = require("9a3cafc6ac4d2d25"), _AppMealDetailsQuery.hash && _AppMealDetailsQuery.hash !== "8574a1ff0fc26c08ba984149da7e290b" && console.error("The definition of 'AppMealDetailsQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data."), _AppMealDetailsQuery), queryRef);
+    return result.randomMeals.map((meal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: meal.name
+        }, void 0, false, {
+            fileName: "src/App.tsx",
+            lineNumber: 8,
+            columnNumber: 41
+        }, this));
 }
-_s(App, "cUbpMqm7ksVuW9vZClyhxC7Bh8Q=", false, function() {
+_s(App, "u+PMPjvchXqTwgksntcMs1hQkqY=", false, function() {
     return [
-        (0, _reactRelay.useLazyLoadQuery)
+        (0, _reactRelay.usePreloadedQuery)
     ];
 });
 _c = App;
@@ -27192,7 +27197,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","9a3cafc6ac4d2d25":"f4KCG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3f4lr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","9a3cafc6ac4d2d25":"f4KCG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./__generated__/AppMealDetailsQuery.graphql":"f4KCG","./RelayEnvironment":"2MASS"}],"3f4lr":[function(require,module,exports) {
 /**
  * Relay v15.0.0
  *
@@ -44263,86 +44268,45 @@ module.exports = useSubscription;
 
 },{"49e0a21485806917":"2Vkpj","238b55bd70e952ac":"21dqq","89172c48da4e5146":"iBK0B"}],"f4KCG":[function(require,module,exports) {
 /**
- * @generated SignedSource<<9311006f88a3ab1b9c6e5aaa405b1476>>
+ * @generated SignedSource<<5319b9e4ba6b329223b61060c029a3cd>>
  * @lightSyntaxTransform
  * @nogrep
  */ /* tslint:disable */ /* eslint-disable */ // @ts-nocheck
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const node = function() {
-    var v0 = {
-        "alias": null,
-        "args": null,
-        "kind": "ScalarField",
-        "name": "id",
-        "storageKey": null
-    }, v1 = {
-        "alias": null,
-        "args": null,
-        "kind": "ScalarField",
-        "name": "name",
-        "storageKey": null
-    }, v2 = [
-        v0 /*: any*/ ,
-        v1 /*: any*/ ,
+    var v0 = [
         {
             "alias": null,
             "args": null,
-            "kind": "ScalarField",
-            "name": "description",
-            "storageKey": null
-        }
-    ], v3 = [
-        {
-            "alias": "firstMeal",
-            "args": [
-                {
-                    "kind": "Literal",
-                    "name": "id",
-                    "value": "meal-1"
-                }
-            ],
             "concreteType": "Meal",
             "kind": "LinkedField",
-            "name": "mealById",
-            "plural": false,
-            "selections": v2 /*: any*/ ,
-            "storageKey": 'mealById(id:"meal-1")'
-        },
-        {
-            "alias": "secondMeal",
-            "args": [
-                {
-                    "kind": "Literal",
-                    "name": "id",
-                    "value": "meal-2"
-                }
-            ],
-            "concreteType": "Meal",
-            "kind": "LinkedField",
-            "name": "mealById",
-            "plural": false,
+            "name": "randomMeals",
+            "plural": true,
             "selections": [
-                v0 /*: any*/ ,
-                v1 /*: any*/ 
-            ],
-            "storageKey": 'mealById(id:"meal-2")'
-        },
-        {
-            "alias": "thirdMeal",
-            "args": [
                 {
-                    "kind": "Literal",
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "description",
+                    "storageKey": null
+                },
+                {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
                     "name": "id",
-                    "value": "meal-123"
+                    "storageKey": null
+                },
+                {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "name",
+                    "storageKey": null
                 }
             ],
-            "concreteType": "Meal",
-            "kind": "LinkedField",
-            "name": "mealById",
-            "plural": false,
-            "selections": v2 /*: any*/ ,
-            "storageKey": 'mealById(id:"meal-123")'
+            "storageKey": null
         }
     ];
     return {
@@ -44351,7 +44315,7 @@ const node = function() {
             "kind": "Fragment",
             "metadata": null,
             "name": "AppMealDetailsQuery",
-            "selections": v3 /*: any*/ ,
+            "selections": v0 /*: any*/ ,
             "type": "Query",
             "abstractKey": null
         },
@@ -44360,19 +44324,19 @@ const node = function() {
             "argumentDefinitions": [],
             "kind": "Operation",
             "name": "AppMealDetailsQuery",
-            "selections": v3 /*: any*/ 
+            "selections": v0 /*: any*/ 
         },
         "params": {
-            "cacheID": "e3f1925f83abfeb739f668752e23c782",
+            "cacheID": "fe82e5a518d37b6c654c9d21880679e6",
             "id": null,
             "metadata": {},
             "name": "AppMealDetailsQuery",
             "operationKind": "query",
-            "text": 'query AppMealDetailsQuery {\n  firstMeal: mealById(id: "meal-1") {\n    id\n    name\n    description\n  }\n  secondMeal: mealById(id: "meal-2") {\n    id\n    name\n  }\n  thirdMeal: mealById(id: "meal-123") {\n    id\n    name\n    description\n  }\n}\n'
+            "text": "query AppMealDetailsQuery {\n  randomMeals {\n    description\n    id\n    name\n  }\n}\n"
         }
     };
 }();
-node.hash = "b4267d36866f59c4578ff11b70bbd070";
+node.hash = "8574a1ff0fc26c08ba984149da7e290b";
 exports.default = node;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -44550,7 +44514,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _relayRuntime = require("relay-runtime");
 async function fetchGraphQL(text, variables) {
     // Fetch data from backend GraphQL API:
-    const response = await fetch("https://localhost:8080/graphql", {
+    const response = await fetch("http://localhost:8080/graphql", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

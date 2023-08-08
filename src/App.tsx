@@ -1,24 +1,21 @@
-import { graphql, useLazyLoadQuery } from "react-relay";
-import { AppMealDetailsQuery } from "./__generated__/AppMealDetailsQuery.graphql";
+import { graphql, loadQuery, useLazyLoadQuery, usePreloadedQuery } from "react-relay";
+import Query, { AppMealDetailsQuery } from "./__generated__/AppMealDetailsQuery.graphql";
+import RelayEnvironment from "./RelayEnvironment";
+
+const queryRef = loadQuery(RelayEnvironment, Query, {})
 
 export function App() {
-  const result = useLazyLoadQuery<AppMealDetailsQuery>(graphql`
+  const result = usePreloadedQuery<AppMealDetailsQuery>(graphql`
     query AppMealDetailsQuery {
-      firstMeal: mealById(id:"meal-1") {
-        id
-        name
+      randomMeals {
         description
-      }
-      secondMeal: mealById(id: "meal-2") {
         id
         name
-      }
-      thirdMeal: mealById(id: "meal-123") {
-        id
-        name
-        description
       }
     }
-  `, {})
-  return <h1>{result.firstMeal.name}</h1>;
+  `, queryRef)
+
+  return result.randomMeals.map( meal =>
+    <p>{meal.name}</p>
+  );
 }
