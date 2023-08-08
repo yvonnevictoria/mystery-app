@@ -10,6 +10,7 @@ type Meal {
     id: ID
     name: String
     description: String
+    image: String
 }
 
 type Mutation {

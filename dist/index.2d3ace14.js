@@ -2968,7 +2968,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRelay.RelayEnviro
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"7F5Te","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-relay":"3f4lr","./RelayEnvironment":"2MASS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"7F5Te","react-relay":"3f4lr","./RelayEnvironment":"2MASS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27164,30 +27164,14 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRelay = require("react-relay");
-var _appMealDetailsQueryGraphql = require("./__generated__/AppMealDetailsQuery.graphql");
-var _appMealDetailsQueryGraphqlDefault = parcelHelpers.interopDefault(_appMealDetailsQueryGraphql);
-var _relayEnvironment = require("./RelayEnvironment");
-var _relayEnvironmentDefault = parcelHelpers.interopDefault(_relayEnvironment);
-var _s = $RefreshSig$();
-var _AppMealDetailsQuery;
-const queryRef = (0, _reactRelay.loadQuery)((0, _relayEnvironmentDefault.default), (0, _appMealDetailsQueryGraphqlDefault.default), {});
+var _meals = require("./components/Meals/Meals");
 function App() {
-    _s();
-    const result = (0, _reactRelay.usePreloadedQuery)(_AppMealDetailsQuery !== void 0 ? _AppMealDetailsQuery : (_AppMealDetailsQuery = require("9a3cafc6ac4d2d25"), _AppMealDetailsQuery.hash && _AppMealDetailsQuery.hash !== "8574a1ff0fc26c08ba984149da7e290b" && console.error("The definition of 'AppMealDetailsQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data."), _AppMealDetailsQuery), queryRef);
-    return result.randomMeals.map((meal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            children: meal.name
-        }, void 0, false, {
-            fileName: "src/App.tsx",
-            lineNumber: 8,
-            columnNumber: 41
-        }, this));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _meals.Meals), {}, void 0, false, {
+        fileName: "src/App.tsx",
+        lineNumber: 3,
+        columnNumber: 10
+    }, this);
 }
-_s(App, "u+PMPjvchXqTwgksntcMs1hQkqY=", false, function() {
-    return [
-        (0, _reactRelay.usePreloadedQuery)
-    ];
-});
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27197,7 +27181,67 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","9a3cafc6ac4d2d25":"f4KCG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./__generated__/AppMealDetailsQuery.graphql":"f4KCG","./RelayEnvironment":"2MASS"}],"3f4lr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./components/Meals/Meals":"45Bec","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"45Bec":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b1ed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b1ed.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Meals", ()=>Meals);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRelay = require("react-relay");
+var _mealsDetailsQueryGraphql = require("./__generated__/MealsDetailsQuery.graphql");
+var _mealsDetailsQueryGraphqlDefault = parcelHelpers.interopDefault(_mealsDetailsQueryGraphql);
+var _relayEnvironment = require("../../RelayEnvironment");
+var _relayEnvironmentDefault = parcelHelpers.interopDefault(_relayEnvironment);
+var _s = $RefreshSig$();
+var _MealsDetailsQuery;
+const queryRef = (0, _reactRelay.loadQuery)((0, _relayEnvironmentDefault.default), (0, _mealsDetailsQueryGraphqlDefault.default), {});
+const Meals = ()=>{
+    _s();
+    const result = (0, _reactRelay.usePreloadedQuery)(_MealsDetailsQuery !== void 0 ? _MealsDetailsQuery : (_MealsDetailsQuery = require("e313ac48e6dd8f66"), _MealsDetailsQuery.hash && _MealsDetailsQuery.hash !== "a5996c8e9d70636ca372bbd59ba4cff6" && console.error("The definition of 'MealsDetailsQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data."), _MealsDetailsQuery), queryRef);
+    return result.randomMeals.map((meal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: meal.name
+                }, void 0, false, {
+                    fileName: "src/components/Meals/Meals.tsx",
+                    lineNumber: 9,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: meal.image
+                }, void 0, false, {
+                    fileName: "src/components/Meals/Meals.tsx",
+                    lineNumber: 10,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Meals/Meals.tsx",
+            lineNumber: 8,
+            columnNumber: 41
+        }, undefined));
+// return <p>test</p>
+};
+_s(Meals, "u+PMPjvchXqTwgksntcMs1hQkqY=", false, function() {
+    return [
+        (0, _reactRelay.usePreloadedQuery)
+    ];
+});
+_c = Meals;
+var _c;
+$RefreshReg$(_c, "Meals");
+
+  $parcel$ReactRefreshHelpers$b1ed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","./__generated__/MealsDetailsQuery.graphql":"fp4NS","../../RelayEnvironment":"2MASS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","e313ac48e6dd8f66":"fp4NS"}],"3f4lr":[function(require,module,exports) {
 /**
  * Relay v15.0.0
  *
@@ -44266,9 +44310,9 @@ function useSubscription(config, requestSubscriptionFn) {
 }
 module.exports = useSubscription;
 
-},{"49e0a21485806917":"2Vkpj","238b55bd70e952ac":"21dqq","89172c48da4e5146":"iBK0B"}],"f4KCG":[function(require,module,exports) {
+},{"49e0a21485806917":"2Vkpj","238b55bd70e952ac":"21dqq","89172c48da4e5146":"iBK0B"}],"fp4NS":[function(require,module,exports) {
 /**
- * @generated SignedSource<<5319b9e4ba6b329223b61060c029a3cd>>
+ * @generated SignedSource<<b4507f67648415a43aa25d17a109fa93>>
  * @lightSyntaxTransform
  * @nogrep
  */ /* tslint:disable */ /* eslint-disable */ // @ts-nocheck
@@ -44304,6 +44348,13 @@ const node = function() {
                     "kind": "ScalarField",
                     "name": "name",
                     "storageKey": null
+                },
+                {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "image",
+                    "storageKey": null
                 }
             ],
             "storageKey": null
@@ -44314,7 +44365,7 @@ const node = function() {
             "argumentDefinitions": [],
             "kind": "Fragment",
             "metadata": null,
-            "name": "AppMealDetailsQuery",
+            "name": "MealsDetailsQuery",
             "selections": v0 /*: any*/ ,
             "type": "Query",
             "abstractKey": null
@@ -44323,20 +44374,20 @@ const node = function() {
         "operation": {
             "argumentDefinitions": [],
             "kind": "Operation",
-            "name": "AppMealDetailsQuery",
+            "name": "MealsDetailsQuery",
             "selections": v0 /*: any*/ 
         },
         "params": {
-            "cacheID": "fe82e5a518d37b6c654c9d21880679e6",
+            "cacheID": "0e093c4ab6f51e3b2ab4b7ec1ed3755c",
             "id": null,
             "metadata": {},
-            "name": "AppMealDetailsQuery",
+            "name": "MealsDetailsQuery",
             "operationKind": "query",
-            "text": "query AppMealDetailsQuery {\n  randomMeals {\n    description\n    id\n    name\n  }\n}\n"
+            "text": "query MealsDetailsQuery {\n  randomMeals {\n    description\n    id\n    name\n    image\n  }\n}\n"
         }
     };
 }();
-node.hash = "8574a1ff0fc26c08ba984149da7e290b";
+node.hash = "a5996c8e9d70636ca372bbd59ba4cff6";
 exports.default = node;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -44369,7 +44420,39 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"km3Ru":[function(require,module,exports) {
+},{}],"2MASS":[function(require,module,exports) {
+// your-app-name/src/RelayEnvironment.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _relayRuntime = require("relay-runtime");
+async function fetchGraphQL(text, variables) {
+    // Fetch data from backend GraphQL API:
+    const response = await fetch("http://localhost:8080/graphql", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            query: text,
+            variables
+        })
+    });
+    // Get the response as JSON
+    return await response.json();
+}
+// Relay passes a "params" object with the query name and text. So we define a helper function
+// to call our fetchGraphQL utility with params.text.
+async function fetchRelay(params, variables) {
+    console.log(`fetching query ${params.name} with ${JSON.stringify(variables)}`);
+    return fetchGraphQL(params.text, variables);
+}
+// Export a singleton instance of Relay Environment configured with our network function:
+exports.default = new (0, _relayRuntime.Environment)({
+    network: (0, _relayRuntime.Network).create(fetchRelay),
+    store: new (0, _relayRuntime.Store)(new (0, _relayRuntime.RecordSource)())
+});
+
+},{"relay-runtime":"iBK0B","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -44507,38 +44590,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"2MASS":[function(require,module,exports) {
-// your-app-name/src/RelayEnvironment.js
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _relayRuntime = require("relay-runtime");
-async function fetchGraphQL(text, variables) {
-    // Fetch data from backend GraphQL API:
-    const response = await fetch("http://localhost:8080/graphql", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            query: text,
-            variables
-        })
-    });
-    // Get the response as JSON
-    return await response.json();
-}
-// Relay passes a "params" object with the query name and text. So we define a helper function
-// to call our fetchGraphQL utility with params.text.
-async function fetchRelay(params, variables) {
-    console.log(`fetching query ${params.name} with ${JSON.stringify(variables)}`);
-    return fetchGraphQL(params.text, variables);
-}
-// Export a singleton instance of Relay Environment configured with our network function:
-exports.default = new (0, _relayRuntime.Environment)({
-    network: (0, _relayRuntime.Network).create(fetchRelay),
-    store: new (0, _relayRuntime.Store)(new (0, _relayRuntime.RecordSource)())
-});
-
-},{"relay-runtime":"iBK0B","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["dm2Ou","1xC6H","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{"7422ead32dcc1e6b":"786KC"}]},["dm2Ou","1xC6H","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map
