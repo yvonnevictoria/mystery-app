@@ -27197,6 +27197,7 @@ var _mealsDetailsQueryGraphql = require("./__generated__/MealsDetailsQuery.graph
 var _mealsDetailsQueryGraphqlDefault = parcelHelpers.interopDefault(_mealsDetailsQueryGraphql);
 var _relayEnvironment = require("../../RelayEnvironment");
 var _relayEnvironmentDefault = parcelHelpers.interopDefault(_relayEnvironment);
+var _mealsCss = require("./Meals.css");
 var _s = $RefreshSig$();
 var _MealsDetailsQuery;
 const queryRef = (0, _reactRelay.loadQuery)((0, _relayEnvironmentDefault.default), (0, _mealsDetailsQueryGraphqlDefault.default), {});
@@ -27209,23 +27210,23 @@ const Meals = ()=>{
                     children: meal.name
                 }, void 0, false, {
                     fileName: "src/components/Meals/Meals.tsx",
-                    lineNumber: 9,
+                    lineNumber: 10,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "meal-image",
                     src: meal.image
                 }, void 0, false, {
                     fileName: "src/components/Meals/Meals.tsx",
-                    lineNumber: 10,
+                    lineNumber: 11,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Meals/Meals.tsx",
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 41
         }, undefined));
-// return <p>test</p>
 };
 _s(Meals, "u+PMPjvchXqTwgksntcMs1hQkqY=", false, function() {
     return [
@@ -27241,7 +27242,7 @@ $RefreshReg$(_c, "Meals");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","./__generated__/MealsDetailsQuery.graphql":"fp4NS","../../RelayEnvironment":"2MASS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","e313ac48e6dd8f66":"fp4NS"}],"3f4lr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-relay":"3f4lr","./__generated__/MealsDetailsQuery.graphql":"fp4NS","../../RelayEnvironment":"2MASS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","e313ac48e6dd8f66":"fp4NS","./Meals.css":"1hNfC"}],"3f4lr":[function(require,module,exports) {
 /**
  * Relay v15.0.0
  *
@@ -44590,6 +44591,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["dm2Ou","1xC6H","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{"7422ead32dcc1e6b":"786KC"}],"1hNfC":[function() {},{}]},["dm2Ou","1xC6H","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map

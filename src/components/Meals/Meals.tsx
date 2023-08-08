@@ -1,6 +1,7 @@
 import { graphql, loadQuery, usePreloadedQuery } from "react-relay";
 import Query, { MealsDetailsQuery } from "./__generated__/MealsDetailsQuery.graphql";
 import RelayEnvironment from "../../RelayEnvironment";
+import "./Meals.css";
 
 const queryRef = loadQuery(RelayEnvironment, Query, {})
 
@@ -19,11 +20,10 @@ const Meals = () => {
   return result.randomMeals.map( meal =>
     <div>
       <p>{meal.name}</p>
-      <img src={meal.image} />
+      <img className="meal-image" src={meal.image} />
     </div>
     
   );
-  // return <p>test</p>
 }
 
 export { Meals };
