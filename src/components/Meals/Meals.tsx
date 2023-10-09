@@ -17,6 +17,8 @@ const Meals = () => {
     }
   `, queryRef)
 
+  // Update this to retrieve next meal instead of mapping
+  // store index of currently chosen and how far we've gotten through list of meals
   return result.randomMeals.map( meal =>
     <div>
       <p>{meal.name}</p>

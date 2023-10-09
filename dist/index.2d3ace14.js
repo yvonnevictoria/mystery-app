@@ -27204,13 +27204,15 @@ const queryRef = (0, _reactRelay.loadQuery)((0, _relayEnvironmentDefault.default
 const Meals = ()=>{
     _s();
     const result = (0, _reactRelay.usePreloadedQuery)(_MealsDetailsQuery !== void 0 ? _MealsDetailsQuery : (_MealsDetailsQuery = require("e313ac48e6dd8f66"), _MealsDetailsQuery.hash && _MealsDetailsQuery.hash !== "a5996c8e9d70636ca372bbd59ba4cff6" && console.error("The definition of 'MealsDetailsQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data."), _MealsDetailsQuery), queryRef);
+    // Update this to retrieve next meal instead of mapping
+    // store index of currently chosen and how far we've gotten through list of meals
     return result.randomMeals.map((meal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     children: meal.name
                 }, void 0, false, {
                     fileName: "src/components/Meals/Meals.tsx",
-                    lineNumber: 10,
+                    lineNumber: 13,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27218,13 +27220,13 @@ const Meals = ()=>{
                     src: meal.image
                 }, void 0, false, {
                     fileName: "src/components/Meals/Meals.tsx",
-                    lineNumber: 11,
+                    lineNumber: 14,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Meals/Meals.tsx",
-            lineNumber: 9,
+            lineNumber: 12,
             columnNumber: 41
         }, undefined));
 };
